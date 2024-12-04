@@ -19,9 +19,23 @@ if(is_top_level)
     find_package(filesystem REQUIRED)
 endif()
 
-set(sources 
+set(public_src
+    controller/filespace_controller.cpp
+    controller/main_workspace_controller.cpp
+    render/render_processor.cpp
+)
+
+set(public_headers
+    include/i_controller.hpp
+    include/i_view.hpp
+    model/filespace_model.hpp
+    view/filespace_view.hpp
+)
+    
+set(sources
+    ${public_src}
+    ${public_headers}
     main.cpp 
-    controller/workspace_controller.cpp
 )
 
 source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}" FILES ${sources})

@@ -21,7 +21,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_library(generic-core) # initialized below
+add_library(generic-core ) # initialized below
 add_library(generic-core::generic-core ALIAS generic-core)
 
 #----------------------------------------------------------------------------------------------------------------------
@@ -51,11 +51,12 @@ target_include_directories(generic-core
 #----------------------------------------------------------------------------------------------------------------------
 
 set(public_src
-    src/file.cpp
+    src/logger.cpp
 )
 
 set(public_headers
     include/generic-core/logger.hpp
+    include/generic-core/logger_init.hpp
     )
     
 set(sources

@@ -38,7 +38,7 @@ if(is_top_level)
 endif()
 
 target_link_libraries(event-system
-    PRIVATE generic-core::generic-core
+    INTERFACE generic-core::generic-core
 )
 
 #----------------------------------------------------------------------------------------------------------------------

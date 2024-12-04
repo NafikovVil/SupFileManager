@@ -52,7 +52,7 @@ set(public_src
 )
 
 set(public_headers
-    include/filesystem/filesystem.h
+    include/filesystem/filesystem.hpp
 )
     
 set(sources

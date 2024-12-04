@@ -25,6 +25,7 @@ add_library(generic-types::generic-types ALIAS generic-types)
 
 set(public_headers
     include/generic-types/i_controller.hpp
+    include/generic-types/i_view.hpp
     include/generic-types/thread_safe_queue.hpp
     )
     

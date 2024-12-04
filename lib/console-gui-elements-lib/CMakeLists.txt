@@ -49,7 +49,7 @@ add_library(console-gui-elements-lib::console-gui-elements-lib ALIAS console-gui
 include(FetchContent)
 FetchContent_Declare(ftxui
   GIT_REPOSITORY https://github.com/ArthurSonzogni/ftxui
-  GIT_TAG v3.0.0
+  GIT_TAG v5.0.0
 )
 
 #FetchContent_GetProperties(ftxui)
@@ -80,11 +80,15 @@ endif()
 generate_export_header(console-gui-elements-lib EXPORT_FILE_NAME include/console-gui-elements-lib/${export_file_name})
 
 set(public_src
-    src/menu_list.cpp
+    src/horizontal_canvas.cpp
+    src/vertical_list.cpp
+    src/window.cpp
     )
 
 set(public_headers
-    include/console-gui-elements-lib/menu_list.hpp
+    include/console-gui-elements-lib/horizontal_canvas.hpp
+    include/console-gui-elements-lib/vertical_list.hpp
+    include/console-gui-elements-lib/window.hpp
     ${os_depend_public_headers})
     
 set(sources
@@ -131,7 +135,7 @@ if(CONSOLE-GUI-ELEMENTS-LIB_INSTALL AND NOT CMAKE_SKIP_INSTALL_RULES)
     install(DIRECTORY include/
         TYPE INCLUDE
         COMPONENT console-gui-elements-lib-dev)
-    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/include/filesystem_lib/${export_file_name}"
+    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/include/console-gui-elements-lib/${export_file_name}"
         COMPONENT console-gui-elements-lib-dev
         DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/console-gui-elements-lib")
 

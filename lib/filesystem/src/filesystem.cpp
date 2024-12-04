@@ -1,7 +1,8 @@
-#include <filesystem/filesystem.h>
+#include <filesystem/filesystem.hpp>
 
 #include <generic-core/logger.hpp>
 
+// std::filesystem
 #include <filesystem>
 
 namespace filesystem
